@@ -1,4 +1,5 @@
-function legitimize(input) {
+function legitimize() {
+    let input = document.getElementById('input');
     let outputElem = document.getElementById('output');
     let text = input.value;
     let regex = /[\wа-я]+/ig;
@@ -7,7 +8,7 @@ function legitimize(input) {
     replacementsArray.sort((a,b) => {return b.length - a.length})
 
     for (word of replacementsArray) {
-        let regexRep = new RegExp(word + '\\b', "g");
+        let regexRep = new RegExp(word + '(?![A-я])', "g");
         text = text.replace(regexRep, '(((' + word + ')))');
     }
 
