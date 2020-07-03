@@ -1,24 +1,26 @@
 <html>
-    <head>
+<head>
     <!-- Дурья твоя башка -->
-    </head>
-    <body>
-        <script type="text/javascript" src="js/index.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <div class="container">
-            <form>
-                <div class="center">
-                    <label>><input type='text' id='input' value="You are a 'Happy merchant', are you not" /></label>
-                </div>
-                <div class="center">
-                    <button onclick="legitimize(document.getElementById('input'))" type="button">Free Pal</button>
-                </div>
-                <div class="center">
-                    <p id='output'>
-                        Output will be here
-                    </p>
-                </div>
-            </form>
+</head>
+<body>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<div class="container">
+    <form>
+        <div class="center">
+            <label><textarea id='input' rows="5" cols="50">
+"You are a 'Happy merchant', are you not"
+                    </textarea></label>
         </div>
-    </body>
+        <div class="center">
+            <button onclick="legitimize(document.getElementById('input'))" type="button">Free Pal</button>
+        </div>
+        <div class="center">
+            <p id='output'>
+                Output will be here
+            </p>
+        </div>
+    </form>
+</div>
+</body>
 </html>
