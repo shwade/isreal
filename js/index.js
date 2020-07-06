@@ -8,7 +8,7 @@ function legitimize() {
     replacementsArray.sort((a,b) => {return b.length - a.length})
 
     for (word of replacementsArray) {
-        let regexRep = new RegExp(word + '(?![A-я])', "g");
+        let regexRep = new RegExp('(?<=[\\s,.:;"\']|^)' + word + '(?=[\\s,.:;"\']|$)', "g");
         text = text.replace(regexRep, '(((' + word + ')))');
     }
 
